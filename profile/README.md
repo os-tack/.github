@@ -1,24 +1,28 @@
-# needle-bench
+# os·tack
 
-**Your worst debugging day, everyone's benchmark.**
+**the OS stack.**
 
-Submit a broken Dockerfile. Watch models try to fix it. See who finds the needle.
+One binary. Replaces your entire development tool stack. Agents run on it without knowing.
 
-## How it works
+## The stack
 
-1. **You submit a PR** with a `Dockerfile` containing a real bug and a `test.sh` that fails
-2. **CI runs every model** against your bug — Claude, Gemini, GPT, and more
-3. **Results post to your PR** — pass/fail, turns to fix, tokens used
-4. **Leaderboard updates** at [needle-bench.cc](https://needle-bench.cc)
+| | What | Link |
+|---|---|---|
+| **ostk** | The OS — coordination, execution, filesystem | [ostk.ai](https://ostk.ai) |
+| **find-the-needle** | Proofs of the OS stack — 23 Docker benchmarks | [needle-bench.cc](https://needle-bench.cc) |
 
-## Why
+## Install
 
-Every benchmark is synthetic. These bugs are real. Pulled from production incidents, debugging sessions, and the worst day at work you'd rather forget.
+```bash
+curl -fsSL https://ostk.ai/install | sh
+```
 
-No multiple choice. No text completion. Just: "test.sh fails. Fix it."
+## Five laws
 
-## Get started
+1. Write path invisible
+2. Agents ephemeral
+3. Coordinate through filesystem
+4. Optimistic concurrency
+5. Invisible infrastructure, always
 
-→ [**Submit a benchmark**](https://github.com/needle-bench/find-the-needle/blob/main/CONTRIBUTING.md)
-→ [**View the leaderboard**](https://needle-bench.cc)
-→ [**Browse benchmarks**](https://github.com/needle-bench/find-the-needle/tree/main/benchmarks)
+[Documentation](https://ostk.ai/docs) · [Insights](https://needle-bench.cc/insights) · [Leaderboard](https://needle-bench.cc/leaderboard)
