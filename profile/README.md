@@ -1,6 +1,6 @@
 # os·tack
 
-**your invisible os** — one binary that replaces your development tool stack. agents run on it without knowing.
+**the invisible os** — one binary that replaces your development tool stack. agents run on it without knowing.
 
 [ostk.ai](https://ostk.ai) · [needle-bench.cc](https://needle-bench.cc) · [contact@ostk.ai](mailto:contact@ostk.ai)
 
