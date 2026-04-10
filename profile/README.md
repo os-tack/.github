@@ -25,7 +25,7 @@
 |---|---|---|
 | **find-the-needle** | 23 Docker benchmarks — submit broken Dockerfiles, watch models fix them | [needle-bench.cc](https://needle-bench.cc) · [repo](https://github.com/os-tack/find-the-needle) |
 
-[Insights](https://needle-bench.cc/insights) · [Leaderboard](https://needle-bench.cc/leaderboard) · [Difficulty tiers](https://needle-bench.cc/insights/difficulty-tiers)
+[Leaderboard](https://needle-bench.cc/) · [Insights](https://needle-bench.cc/insights/) · [Difficulty tiers](https://needle-bench.cc/insights/difficulty-tiers/)
 
 ### File Context Protocol (FCP)
 
@@ -85,4 +85,4 @@ All kernel operations are audited via `.ostk/audit.jsonl`. Agent identity is est
 
 ---
 
-[Documentation](https://ostk.ai/docs) · [Insights](https://needle-bench.cc/insights) · [contact@ostk.ai](mailto:contact@ostk.ai)
+[Documentation](https://ostk.ai/docs) · [Insights](https://needle-bench.cc/insights/) · [contact@ostk.ai](mailto:contact@ostk.ai)
