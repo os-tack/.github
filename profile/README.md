@@ -17,10 +17,7 @@
 | Project | What it is | |
 |---|---|---|
 | **ostk** | The OS — one binary, coordination + execution + filesystem | [ostk.ai](https://ostk.ai) · [repo](https://github.com/os-tack/ostk.ai) |
-| **haystack** | Coordination kernel — agents, needles, compression, OCC | [repo](https://github.com/os-tack/haystack) |
-| **claude-code** | Agent harness integration | [repo](https://github.com/os-tack/claude-code) |
 | **osteak** | Elm-style architecture for ratatui — you bring the loop | [repo](https://github.com/os-tack/osteak) |
-| **ratatui-e2e** | Cell-grid reconstruction for behavioural TUI tests | [repo](https://github.com/os-tack/ratatui-e2e) |
 
 ### Benchmarks
 
