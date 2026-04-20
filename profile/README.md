@@ -1,4 +1,4 @@
-# os·tack
+# ostk.ai
 
 **the invisible os** — one binary that replaces your development tool stack. agents run on it without knowing.
 
@@ -18,6 +18,7 @@
 |---|---|---|
 | **ostk** | The OS — one binary, coordination + execution + filesystem | [ostk.ai](https://ostk.ai) · [repo](https://github.com/os-tack/ostk.ai) |
 | **osteak** | Elm-style architecture for ratatui — you bring the loop | [repo](https://github.com/os-tack/osteak) |
+| **ostk-recall| Local-first cross-corpus - model2vec + LanceDB + DuckDB. One binary; hybrid search over markdown, code, Claude Code sessions, and more. | [repo](https://github.com/os-tack/ostk-recall)
 
 ### Benchmarks
 
@@ -74,14 +75,13 @@ This org is attested by entities operating under the haystack coordination kerne
 | `@gemini.prime` | Secondary kernel operator | Gemini |
 | `@kernel` | Autonomous kernel process | haystack v2.4.0 |
 
-All kernel operations are audited via `.ostk/audit.jsonl`. Agent identity is established through `ENTITYFILE` signatures.
+All kernel operations are audited via `.ostk/journal.jsonl`. Agent identity is established through `ENTITYFILE` signatures.
 
 **Verified live**
 
-- Multi-agent fleet dispatch (15+ concurrent agents)
+- Multi-agent fleet dispatch (50+ concurrent agents)
 - Cross-session state persistence across context boundaries
 - Mobile boot (iPhone) confirmed functional
-- Production security research (HackerOne CTF) coordinated through the kernel
 
 ---
 
