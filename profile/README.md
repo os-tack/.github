@@ -18,7 +18,7 @@
 |---|---|---|
 | **ostk** | The OS — one binary, coordination + execution + filesystem | [ostk.ai](https://ostk.ai) · [repo](https://github.com/os-tack/ostk.ai) |
 | **osteak** | Elm-style architecture for ratatui — you bring the loop | [repo](https://github.com/os-tack/osteak) |
-| **ostk-recall| Local-first cross-corpus - model2vec + LanceDB + DuckDB. One binary; hybrid search over markdown, code, Claude Code sessions, and more. | [repo](https://github.com/os-tack/ostk-recall)
+| **ostk-recall** | Local-first cross-corpus - model2vec + LanceDB + DuckDB. One binary; hybrid search over markdown, code, Claude Code sessions, and more. | [repo](https://github.com/os-tack/ostk-recall)
 
 ### Benchmarks
 
