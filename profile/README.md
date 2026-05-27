@@ -1,46 +1,57 @@
-# ostk.ai
+# os-tack
 
-**the invisible os** — one binary that replaces your development tool stack. agents run on it without knowing.
+Local-first infrastructure for AI agents. Public projects are AGPL-3.0 or MIT; production binaries are GPG-signed.
 
-[ostk.ai](https://ostk.ai) · [needle-bench.cc](https://needle-bench.cc) · [contact@ostk.ai](mailto:contact@ostk.ai)
+[ostk.ai](https://ostk.ai) · [contact@ostk.ai](mailto:contact@ostk.ai)
 
 ## Install
 
-    curl -fsSL https://ostk.ai/install | sh
+```
+curl -fsSL https://ostk.ai/install.sh | sh
+```
 
 ---
 
-## The stack
+## ostk — the kernel
 
-### OS
+| Repo | What it is |
+|---|---|
+| [`ostk.ai`](https://github.com/os-tack/ostk.ai) | Production release mirror. Signed binaries, governance bail, prime key. |
+| [`ostk-site`](https://github.com/os-tack/ostk-site) | Source for ostk.ai. Astro. |
+| [`libostk`](https://github.com/os-tack/libostk) | Userspace client library for the ostk kernel. |
+| [`homebrew-ostk`](https://github.com/os-tack/homebrew-ostk) | Homebrew tap. Auto-updated on release. |
+| [`ostk-recall`](https://github.com/os-tack/ostk-recall) | Local-first hybrid retrieval MCP server — model2vec embeddings + LanceDB + Tantivy BM25 + SQLite. One binary; hybrid search across markdown, code, and Claude Code sessions. |
+| [`ostk-cache`](https://github.com/os-tack/ostk-cache) | Context-aware caching proxy for Anthropic and OpenAI. Drop-in for Claude Code, Codex, Cursor, and custom harnesses. |
+| [`osteak`](https://github.com/os-tack/osteak) | Elm-style architecture for ratatui — you bring the loop. |
 
-| Project | What it is | |
-|---|---|---|
-| **ostk** | The OS — one binary, coordination + execution + filesystem | [ostk.ai](https://ostk.ai) · [repo](https://github.com/os-tack/ostk.ai) |
-| **osteak** | Elm-style architecture for ratatui — you bring the loop | [repo](https://github.com/os-tack/osteak) |
-| **ostk-recall** | Local-first cross-corpus - model2vec + LanceDB + DuckDB. One binary; hybrid search over markdown, code, Claude Code sessions, and more. | [repo](https://github.com/os-tack/ostk-recall)
+## Companion tools
 
-### Benchmarks
+| Repo | What it is |
+|---|---|
+| [`prism`](https://github.com/os-tack/prism) | Project a canonical `.agents/` directory into every AI coding tool's config (Claude, Cursor, Gemini, Cline, Continue, Windsurf, Copilot, AGENTS.md). |
+| [`docfresh`](https://github.com/os-tack/docfresh) | Track documentation freshness against source code. |
 
-| Project | What it is | |
-|---|---|---|
-| **find-the-needle** | 23 Docker benchmarks — submit broken Dockerfiles, watch models fix them | [needle-bench.cc](https://needle-bench.cc) · [repo](https://github.com/os-tack/find-the-needle) |
+## Benchmarks
 
-[Leaderboard](https://needle-bench.cc/) · [Insights](https://needle-bench.cc/insights/) · [Difficulty tiers](https://needle-bench.cc/insights/difficulty-tiers/)
+| Repo | What it is |
+|---|---|
+| [`find-the-needle`](https://github.com/os-tack/find-the-needle) | 23 Docker benchmarks. Submit broken Dockerfiles, watch models fix them. Leaderboard at [needle-bench.cc](https://needle-bench.cc). |
 
-### File Context Protocol (FCP)
+## File Context Protocol (FCP)
 
-MCP servers that let LLMs interact with complex file formats through verb-based DSLs. Instead of raw file I/O, each driver exposes the semantic operations that format actually supports.
+MCP servers that expose verb-based DSLs over complex file formats. Each driver exposes the semantic operations a format supports rather than raw file I/O.
 
 **Frameworks**
 
-- [`fcp`](https://github.com/os-tack/fcp) — the protocol
-- [`fcp-core`](https://github.com/os-tack/fcp-core) — TypeScript + Python shared framework
-- [`fcp-core-rust`](https://github.com/os-tack/fcp-core-rust) — Rust shared framework
+| Repo | Language |
+|---|---|
+| [`fcp`](https://github.com/os-tack/fcp) | Protocol spec |
+| [`fcp-core`](https://github.com/os-tack/fcp-core) | TypeScript + Python shared framework |
+| [`fcp-core-rust`](https://github.com/os-tack/fcp-core-rust) | Rust shared framework |
 
 **Drivers**
 
-| Driver | Format |
+| Repo | Format |
 |---|---|
 | [`fcp-pdf`](https://github.com/os-tack/fcp-pdf) | PDF — read, annotate, redact, merge, split |
 | [`fcp-drawio`](https://github.com/os-tack/fcp-drawio) | draw.io diagrams |
@@ -48,41 +59,10 @@ MCP servers that let LLMs interact with complex file formats through verb-based 
 | [`fcp-sheets`](https://github.com/os-tack/fcp-sheets) | Spreadsheets |
 | [`fcp-slides`](https://github.com/os-tack/fcp-slides) | Slide decks |
 | [`fcp-terraform`](https://github.com/os-tack/fcp-terraform) | Terraform HCL |
-| [`fcp-rust`](https://github.com/os-tack/fcp-rust) | Rust codebases (rust-analyzer) |
-| [`fcp-python`](https://github.com/os-tack/fcp-python) | Python codebases (pylsp) |
+| [`fcp-rust`](https://github.com/os-tack/fcp-rust) | Rust codebases via rust-analyzer |
+| [`fcp-python`](https://github.com/os-tack/fcp-python) | Python codebases via pylsp |
 | [`fcp-regex`](https://github.com/os-tack/fcp-regex) | Regex via named fragment composition |
 
 ---
 
-## Five laws
-
-1. **Invisible write** — file mutations are tracked with generation counters
-2. **Ephemeral agents** — fleet processes are reaped on session close
-3. **Filesystem coordination** — all state flows through the filesystem, never through agent memory
-4. **Optimistic concurrency** — conflicts resolve at write time via Hot PR
-5. **Invisible infrastructure** — always
-
----
-
-## Provenance
-
-This org is attested by entities operating under the haystack coordination kernel:
-
-| Entity | Role | Identity |
-|---|---|---|
-| `@scottmeyer` | Human operator, org owner | [scottmeyer](https://github.com/scottmeyer) |
-| `@haystack.prime` | Primary kernel operator | Claude Opus 4.6 |
-| `@gemini.prime` | Secondary kernel operator | Gemini |
-| `@kernel` | Autonomous kernel process | haystack v2.4.0 |
-
-All kernel operations are audited via `.ostk/journal.jsonl`. Agent identity is established through `ENTITYFILE` signatures.
-
-**Verified live**
-
-- Multi-agent fleet dispatch (50+ concurrent agents)
-- Cross-session state persistence across context boundaries
-- Mobile boot (iPhone) confirmed functional
-
----
-
-[Documentation](https://ostk.ai/docs) · [Insights](https://needle-bench.cc/insights/) · [contact@ostk.ai](mailto:contact@ostk.ai)
+[Documentation](https://ostk.ai/docs) · [contact@ostk.ai](mailto:contact@ostk.ai)
